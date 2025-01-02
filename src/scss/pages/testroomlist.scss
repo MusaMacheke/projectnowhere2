@@ -1,0 +1,285 @@
+.t_r-list-ctr {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem 0;
+
+	.add-room-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.5rem 1rem;
+		align-self: flex-end;
+		gap: 0 0.5rem;
+		outline: none;
+		border: none;
+		border-radius: 5px;
+		background-color: #574efa;
+		color: #f8f8f8;
+		font-weight: 600;
+
+		p {
+			margin: 0;
+			padding: 0;
+		}
+
+		svg {
+			color: white;
+			width: 1rem;
+			height: 1rem;
+		}
+	}
+}
+
+.t_r-list-card {
+	display: flex;
+	align-items: center;
+	min-height: 10rem;
+	padding: 0.8rem 1rem;
+	border: 1px solid #f1f1f1;
+	background-color: white;
+	border-radius: 8px;
+	transition: 0.2s ease-in-out;
+	cursor: pointer;
+	justify-content: space-between;
+
+	.t_r-list-cd-info {
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+		width: 40%;
+
+		p {
+			margin: 0;
+		}
+
+		img {
+			min-width: 15rem;
+			max-width: 15rem;
+			max-height: 9rem;
+			border-radius: 8px;
+		}
+	}
+
+	.t_r_list-cd-rate {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 33%;
+		font-size: 1rem;
+		height: 100%;
+
+		div {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			p {
+				display: flex;
+				gap: 0;
+				margin: 0;
+				display: flex;
+				align-items: center;
+				text-align: center;
+				color: black;
+				font-size: 1.3rem;
+				gap: 0 0.3rem;
+			}
+
+			span {
+				color: #7c7c7c;
+				margin: 0;
+				padding: 0;
+			}
+
+			:nth-child(2) {
+				font-size: 0.95rem;
+				color: #7c7c7c;
+			}
+		}
+
+		.t_r_list-cd-rt-lc {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 0.5rem 0;
+
+			p {
+				color: #7c7c7c;
+				margin: 0;
+				font-size: 0.9rem;
+			}
+
+			span {
+				color: white;
+				padding: 0.5rem;
+			}
+		}
+	}
+
+	.t_r-list-cd-dot {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 3rem;
+		height: 3rem;
+		border-radius: 5px;
+		transition: 0.2s ease-in-out;
+
+		svg {
+			color: black;
+			width: 2rem;
+			height: 2rem;
+		}
+
+		&:hover {
+			background-color: #f1f1f1;
+		}
+	}
+
+	span {
+		padding: 1rem;
+		border-radius: 5px;
+		color: white;
+		font-size: 1rem;
+		font-weight: 500;
+	}
+
+	&:hover {
+		box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+		// scale: (1.01);
+		color: initial;
+	}
+}
+
+.t_r-list-cd-amt {
+	display: flex;
+	gap: 0.5rem 1rem;
+	flex-wrap: wrap;
+
+	p {
+		font-size: 0.75rem;
+		margin: 0;
+		padding: 0.2rem 0.5rem;
+		background-color: #f7f7f7;
+		border-radius: 5px;
+	}
+}
+
+.animeLeft {
+	opacity: 0;
+	transform: translateX(20px);
+	animation: animeRight 0.5s forwards;
+	transition: 0.2s ease-in-out;
+}
+
+@keyframes animeRight {
+	to {
+		opacity: 0.25;
+	}
+	to {
+		opacity: 0.5;
+	}
+	to {
+		opacity: 0.75;
+	}
+	to {
+		opacity: 1;
+		transform: initial;
+	}
+}
+
+@media (max-width: 1500px) {
+	.t_r-list-ctr {
+		.t_r-list-card {
+			.t_r-list-cd-info {
+				width: 50%;
+				// background-color: red;
+			}
+		}
+	}
+}
+@media (max-width: 1280px) {
+	.t_r-list-ctr {
+		.t_r-list-card {
+			.t_r-list-cd-info {
+				width: 55%;
+				// background-color: red;
+			}
+		}
+	}
+}
+
+@media (max-width: 1025px) {
+	.t_r-list-ctr {
+		.t_r-list-card {
+			height: auto;
+			.t_r-list-cd-info {
+				div {
+					.t_r-list-cd-amt {
+						flex-wrap: wrap;
+					}
+				}
+			}
+
+			.t_r_list-cd-rate {
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.t_r-list-ctr {
+		.t_r-list-card {
+			height: auto;
+			.t_r-list-cd-info {
+				width: 40%;
+				div {
+					.t_r-list-cd-amt {
+						flex-wrap: wrap;
+					}
+				}
+
+				img {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.t_r-list-ctr {
+		.t_r-list-card {
+			display: flex;
+			justify-content: space-between;
+
+			.t_r-list-cd-info {
+				width: 40%;
+
+				.t_r-list-cd-amt {
+				}
+
+				img {
+					display: none;
+				}
+			}
+
+			.t_r_list-cd-rate {
+				width: 40%;
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.t_r-list-ctr {
+		.t_r-list-card {
+			.t_r-list-cd-info {
+				width: 50%;
+			}
+			.t_r_list-cd-rate {
+				flex-direction: column;
+			}
+		}
+	}
+}
