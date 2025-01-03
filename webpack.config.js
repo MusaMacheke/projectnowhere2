@@ -1,4 +1,4 @@
-import "src/vendor/bootstrap-select/dist/css/bootstrap-select.min.css";
+import "node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 module.exports = {
     resolve:{

@@ -8,7 +8,7 @@ import {  Route, Routes, useLocation , useNavigate , useParams } from 'react-rou
 import { checkAutoLogin } from './services/AuthService';
 import { isAuthenticated } from './store/selectors/AuthSelectors';
 /// Style
-import "src/vendor/bootstrap-select/dist/css/bootstrap-select.min.css";
+import "node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./css/style.css";
 
 const SignUp = lazy(() => import('./jsx/pages/auth/Registration'));
