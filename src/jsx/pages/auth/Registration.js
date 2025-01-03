@@ -38,7 +38,7 @@ function Register(props) {
 
     axios.post('/auth/signup', user, {
       // baseURL: 'http://localhost:8000/api/v1'
-      baseURL: 'https://adminbackend-hb4i.onrender.com/api/v1'
+      baseURL: 'https://adminbackend-three.vercel.app/api/v1'
     })
       .then(res => {
         new Swal({

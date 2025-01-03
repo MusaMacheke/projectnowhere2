@@ -61,7 +61,7 @@
     "recharts": "^2.1.16",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.2",
-    "sass": "^1.77.4",
+    "sass": "^1.83.0",
     "slick-carousel": "^1.8.1",
     "sweetalert": "^2.1.2",
     "sweetalert2": "^11.6.15",
@@ -75,7 +75,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass": "node-sass --watch src/scss/main.scss src/css/style.css --source-map src/css/style.css.map"
+    "sass": "sass --watch src/scss/main.scss:src/css/style.css --source-map"
   },
   "eslintConfig": {
     "extends": [
@@ -94,5 +94,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "webpack": "^5.97.1"
   }
 }
